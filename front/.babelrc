@@ -1,0 +1,13 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      { "targets": { "browsers": ["last 2 versions", ">= 5%"] } }
+    ],
+    "@babel/react"
+  ],
+  // plubin-transform-runtime is required to suppress error
+  // `Uncaught ReferenceError: regeneratorRuntime is not defined`
+  // Reference: https://eshlox.net/2020/05/28/parcel-uncaught-referenceerror-regeneratorruntime
+  "plugins": ["@babel/plugin-transform-runtime"]
+}

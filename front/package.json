@@ -1,0 +1,41 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "",
+  "proxy": "http://back:3000",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --port 3000 --mode development",
+    "prebuild": "rimraf dist",
+    "build": "webpack --progress --mode production",
+    "build:dev": "webpack --progress --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/runtime": "^7.14.6",
+    "@types/express": "^4.17.12",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "babel-loader": "^8.2.2",
+    "copy-webpack-plugin": "^9.0.1",
+    "dotenv-webpack": "^7.0.3",
+    "html-webpack-plugin": "^5.3.2",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.41.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

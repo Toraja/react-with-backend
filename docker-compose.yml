@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  front:
+    image: node:16-buster
+    working_dir: /app/
+    volumes:
+      - type: bind
+        source: ./front/
+        target: /app/
+    ports:
+    - target: 3000
+      published: 3333
+    networks:
+      backend:
+    command: ["node", "/app/server.js"]
+  back:
+    image: node:16-buster
+    working_dir: /app/
+    volumes:
+      - type: bind
+        source: ./back/
+        target: /app/
+    ports:
+    - target: 3000
+      published: 3030
+    networks:
+      backend:
+    command: ["node", "/app/server.js"]
+networks:
+  backend:
